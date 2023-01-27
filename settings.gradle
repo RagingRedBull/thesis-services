@@ -1,0 +1,4 @@
+rootProject.name = 'thesis-rework'
+include 'common', 'framework', 'ui-backend'
+include 'image-service'
+

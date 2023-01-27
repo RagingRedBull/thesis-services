@@ -1,0 +1,23 @@
+server:
+  port: 8083
+framework:
+  messaging:
+    url: tcp://${MSG_BROKER_URL}:1883
+    username: ${MSG_BROKER_USER}
+    password: ${MSG_BROKER_PASSWORD}
+
+spring:
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  properties:
+    hibernate:
+      jdbc:
+        time_zone: UTC
+  hibernate:
+    ddl-auto: create-drop
+    generate-ddl: true
+  datasource:
+    url: jdbc:postgresql://${DB_URL}:5432/dev
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}

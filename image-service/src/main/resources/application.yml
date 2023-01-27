@@ -1,0 +1,5 @@
+app:
+  locations:
+    images: ${IMG_SAVE_LOCATION}
+server:
+  port: 8082
