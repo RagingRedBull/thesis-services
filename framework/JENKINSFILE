@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            agent {
+                docker {
+                    image 'eclipse-temurin:17-jre-alpine'
+                    reuseNode true
+                }
+            }
+            steps {
+                sh 'java -version'
+            }
+        }
+    }
+}
